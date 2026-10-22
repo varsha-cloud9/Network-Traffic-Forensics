@@ -1,0 +1,213 @@
+{
+  "project": "Network Traffic Forensics Toolkit",
+  "capture_file": "SkypeIRC.cap",
+  "analysis_timestamp_utc": "2026-10-22T11:08:21.744698+00:00",
+  "packets_parsed": 2263,
+  "malformed_or_skipped_packets": 0,
+  "unique_flows": 225,
+  "unique_source_ips": 148,
+  "protocol_counts": {
+    "TCP": 1150,
+    "UDP": 1072,
+    "OTHER": 16,
+    "ICMP": 23,
+    "IP": 2
+  },
+  "top_destination_ports": [
+    {
+      "port": "UDP/53",
+      "packets": 354
+    },
+    {
+      "port": "UDP/2128",
+      "packets": 344
+    },
+    {
+      "port": "UDP/35990",
+      "packets": 173
+    },
+    {
+      "port": "TCP/6667",
+      "packets": 159
+    },
+    {
+      "port": "TCP/2848",
+      "packets": 141
+    },
+    {
+      "port": "TCP/4026",
+      "packets": 43
+    },
+    {
+      "port": "TCP/14232",
+      "packets": 43
+    },
+    {
+      "port": "TCP/4984",
+      "packets": 41
+    },
+    {
+      "port": "TCP/11352",
+      "packets": 41
+    },
+    {
+      "port": "TCP/57322",
+      "packets": 28
+    },
+    {
+      "port": "TCP/3863",
+      "packets": 27
+    },
+    {
+      "port": "TCP/8022",
+      "packets": 27
+    },
+    {
+      "port": "TCP/12350",
+      "packets": 22
+    },
+    {
+      "port": "TCP/12492",
+      "packets": 21
+    },
+    {
+      "port": "TCP/1312",
+      "packets": 17
+    }
+  ],
+  "top_talkers": [
+    {
+      "ip": "192.168.1.2",
+      "packets": 1177,
+      "bytes": 105545
+    },
+    {
+      "ip": "192.168.1.1",
+      "packets": 355,
+      "bytes": 42589
+    },
+    {
+      "ip": "212.204.214.114",
+      "packets": 141,
+      "bytes": 111309
+    },
+    {
+      "ip": "71.10.179.129",
+      "packets": 43,
+      "bytes": 4171
+    },
+    {
+      "ip": "172.200.160.242",
+      "packets": 41,
+      "bytes": 3972
+    },
+    {
+      "ip": "24.177.122.79",
+      "packets": 27,
+      "bytes": 2187
+    },
+    {
+      "ip": "212.72.49.142",
+      "packets": 20,
+      "bytes": 1505
+    },
+    {
+      "ip": "68.206.150.243",
+      "packets": 18,
+      "bytes": 3165
+    },
+    {
+      "ip": "24.28.248.6",
+      "packets": 18,
+      "bytes": 24145
+    },
+    {
+      "ip": "67.163.96.170",
+      "packets": 18,
+      "bytes": 24125
+    },
+    {
+      "ip": "80.73.178.211",
+      "packets": 18,
+      "bytes": 24560
+    },
+    {
+      "ip": "67.71.69.121",
+      "packets": 14,
+      "bytes": 2346
+    },
+    {
+      "ip": "212.72.49.131",
+      "packets": 10,
+      "bytes": 1468
+    },
+    {
+      "ip": "195.215.8.141",
+      "packets": 9,
+      "bytes": 906
+    },
+    {
+      "ip": "84.228.208.91",
+      "packets": 9,
+      "bytes": 585
+    },
+    {
+      "ip": "69.160.6.18",
+      "packets": 9,
+      "bytes": 2379
+    },
+    {
+      "ip": "189.132.176.243",
+      "packets": 9,
+      "bytes": 613
+    },
+    {
+      "ip": "82.40.35.124",
+      "packets": 7,
+      "bytes": 2084
+    },
+    {
+      "ip": "68.32.70.119",
+      "packets": 6,
+      "bytes": 456
+    },
+    {
+      "ip": "66.67.61.44",
+      "packets": 6,
+      "bytes": 810
+    }
+  ],
+  "packet_length_bytes": {
+    "min": 32,
+    "max": 1514,
+    "mean": 169.97,
+    "median": 82
+  },
+  "dns_unique_query_names": 345,
+  "findings_count": 11,
+  "findings_by_severity": {
+    "HIGH": 1,
+    "MEDIUM": 3,
+    "LOW": 7
+  },
+  "detection_thresholds": {
+    "port_sweep_distinct_destination_ports": 15,
+    "syn_only_packets": 25,
+    "tcp_udp_packets_per_source": 30,
+    "dns_query_name_length": 50
+  },
+  "limitations": [
+    "Heuristic findings are leads for investigation, not proof of malicious activity.",
+    "Encrypted payload contents are not decoded.",
+    "Packet loss, capture point, asymmetric routing, NAT, and sampling can affect results.",
+    "The coarse connection-volume rule counts packets rather than reconstructed sessions."
+  ],
+  "artifacts": [
+    "packets.csv",
+    "flows.csv",
+    "findings.json",
+    "summary.json",
+    "protocol_distribution.png",
+    "top_talkers.png"
+  ]
+}

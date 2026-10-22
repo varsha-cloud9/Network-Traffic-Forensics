@@ -1,0 +1,112 @@
+[
+  {
+    "severity": "HIGH",
+    "rule_id": "NET-001",
+    "title": "Possible multi-port sweep",
+    "source_ip": "192.168.1.2",
+    "destination": "multiple destinations/ports",
+    "evidence_count": 173,
+    "description": "Source contacted 173 distinct destination ports in the capture.",
+    "recommendation": "Validate against approved scanners and asset inventory; inspect time ordering and destination context."
+  },
+  {
+    "severity": "MEDIUM",
+    "rule_id": "NET-002",
+    "title": "High count of TCP SYN-only packets",
+    "source_ip": "192.168.1.2",
+    "destination": "multiple endpoints",
+    "evidence_count": 106,
+    "description": "Observed 106 TCP packets with SYN set and ACK not set.",
+    "recommendation": "Correlate with TCP responses and time windows; legitimate connection bursts can trigger this heuristic."
+  },
+  {
+    "severity": "LOW",
+    "rule_id": "NET-003",
+    "title": "High connection-attempt volume",
+    "source_ip": "192.168.1.2",
+    "destination": "multiple endpoints",
+    "evidence_count": 1174,
+    "description": "Observed 1174 TCP/UDP packets with source address 192.168.1.2; this is a coarse volume indicator.",
+    "recommendation": "Review destination diversity, rates, and known application behavior before escalation."
+  },
+  {
+    "severity": "LOW",
+    "rule_id": "NET-003",
+    "title": "High connection-attempt volume",
+    "source_ip": "212.204.214.114",
+    "destination": "multiple endpoints",
+    "evidence_count": 141,
+    "description": "Observed 141 TCP/UDP packets with source address 212.204.214.114; this is a coarse volume indicator.",
+    "recommendation": "Review destination diversity, rates, and known application behavior before escalation."
+  },
+  {
+    "severity": "LOW",
+    "rule_id": "NET-003",
+    "title": "High connection-attempt volume",
+    "source_ip": "192.168.1.1",
+    "destination": "multiple endpoints",
+    "evidence_count": 353,
+    "description": "Observed 353 TCP/UDP packets with source address 192.168.1.1; this is a coarse volume indicator.",
+    "recommendation": "Review destination diversity, rates, and known application behavior before escalation."
+  },
+  {
+    "severity": "LOW",
+    "rule_id": "NET-003",
+    "title": "High connection-attempt volume",
+    "source_ip": "71.10.179.129",
+    "destination": "multiple endpoints",
+    "evidence_count": 43,
+    "description": "Observed 43 TCP/UDP packets with source address 71.10.179.129; this is a coarse volume indicator.",
+    "recommendation": "Review destination diversity, rates, and known application behavior before escalation."
+  },
+  {
+    "severity": "LOW",
+    "rule_id": "NET-003",
+    "title": "High connection-attempt volume",
+    "source_ip": "172.200.160.242",
+    "destination": "multiple endpoints",
+    "evidence_count": 41,
+    "description": "Observed 41 TCP/UDP packets with source address 172.200.160.242; this is a coarse volume indicator.",
+    "recommendation": "Review destination diversity, rates, and known application behavior before escalation."
+  },
+  {
+    "severity": "MEDIUM",
+    "rule_id": "DNS-001",
+    "title": "Unusually long DNS query name",
+    "source_ip": "192.168.1.2",
+    "destination": "DNS",
+    "evidence_count": 5,
+    "description": "Found 5 distinct DNS query names at or above 50 characters; longest was 56.",
+    "recommendation": "Inspect full query names, label lengths, entropy, frequency, and resolver context. Length alone is not proof of tunneling."
+  },
+  {
+    "severity": "LOW",
+    "rule_id": "DNS-002",
+    "title": "High DNS query-name diversity",
+    "source_ip": "192.168.1.2",
+    "destination": "DNS",
+    "evidence_count": 345,
+    "description": "Source issued 345 distinct DNS query names in the capture.",
+    "recommendation": "Check for browser/application behavior, telemetry, malware indicators, and query timing."
+  },
+  {
+    "severity": "MEDIUM",
+    "rule_id": "DNS-001",
+    "title": "Unusually long DNS query name",
+    "source_ip": "192.168.1.1",
+    "destination": "DNS",
+    "evidence_count": 5,
+    "description": "Found 5 distinct DNS query names at or above 50 characters; longest was 56.",
+    "recommendation": "Inspect full query names, label lengths, entropy, frequency, and resolver context. Length alone is not proof of tunneling."
+  },
+  {
+    "severity": "LOW",
+    "rule_id": "DNS-002",
+    "title": "High DNS query-name diversity",
+    "source_ip": "192.168.1.1",
+    "destination": "DNS",
+    "evidence_count": 345,
+    "description": "Source issued 345 distinct DNS query names in the capture.",
+    "recommendation": "Check for browser/application behavior, telemetry, malware indicators, and query timing."
+  }
+]
